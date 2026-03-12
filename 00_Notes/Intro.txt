@@ -1,0 +1,253 @@
+React is a front end library use to design webpages created by Meta
+
+01. Why to learn React?
+    => Hype, Job, trend, build UI
+    => Makes easy to manage and build complex front end
+
+02. When should I learn React?
+    => After "Mastering JS"
+    => Because most project don't need react in initial phase
+
+03. Why react was created?
+    => There was no synchronisation between state(also consider as variables) and DOM
+
+04. Don't learn react if,
+    => You don't know how JS works OR DOM works
+
+05. React is a library
+    Analogy : Homemade house is Framework (Customisation is not allowed (only fewer Customisation is allowed)) and 
+              Building home from foundation is library (fully Customisation allowed)
+
+06. Topics to learn (Foundation)
+    => Core of react (state Or UI manipulation, JSX(It is like HTML within JS))
+    => Component reusability (Like how to use buttons, cards etc anywhere by creating it once)
+    => Reusing of Component (Props (properties are props), It is will be learnt during Component reusability like how we pass props in components)
+    => How to propagate change (hooks (As we know changes doesn't get reflected to UI so to make that changes in UI we have to use hooks))
+
+07. Additional Addon to React
+    => Router (React dont have router so to use router we have to install another library called react-router)
+    => State management (React doesn't have State management so we have to use another library of JS called redux, redux toolkit , zustand, context API) in return it gives hooks
+    => Class Based Components (React is based on function nowadays but in initial days of react everything was class base, So we should not learn that old code but we should know how was that code)
+    => BAAS Apps (Backend As A Service like Firebase, Appwrite, Superbase) these products helps us to use backend without writing backend code like social media clone or e-commerece Apps
+
+08. After React
+    => Can go to Backend
+    => If we want to stay in frontend, then try to understand react as not a complete solution in most cases like, 
+        1. No SEO - react doesn't come with seo means tags doesn't generate in well manner so search engines can't read that code properly
+        2. Browser rendering - Code  get shipped in browser then browser generates HTMl and CSS so if browser gets this much work then our website may get slower for bigger projects
+        3. No routing
+    => Framework (NextJS, Gatsby, Remix) - To overcome above issue we use these Frameworks
+        tip - NextJS allows us to write backend and frontend within single framework
+
+09. React has two parts
+    1. React DOM (for web)
+    2. React-Native (for mobile apps)
+
+10. React JS Prerequisite : 
+    01. ES5 vs Es6
+    02. Array => Array methods, forEach, map, filter, reduce, find, findIndex
+    03. Objects => Object methods, Object destructuring, Date, Number, Math, Map, Set, loops, Obj in array, shallow vs deep copy, Obj cloning  
+    04. Functions => Normal, Hoisting, this & Arrow, IIFE, HOF, object prototyping, 
+    05. Advance Loops => for_in loop, for_of loop
+    06. Rest and Spread Operator
+    07. try...catch block
+    08. DOM (basics)
+    09. Event
+    10. Event Loop => setTimeout(), setInterval()
+    11. Promise
+    12. async await
+    13. Fetch API
+    14. call, apply, bind
+    15. Advance Objects
+
+11. React JS Syllabus : 
+    01. Installation of React JS (Tailwind too wherever required) : 
+    02. Understanding React folder contents : 
+    03. Understanding main component (main.jsx), App component(App.jsx) and custom components : 
+    04. JSX (JavaScript XML) : 
+    05. props, props from other component : 
+    06. VirtualDOM, Fiber and Reconciliation : 
+    07. hooks : 
+    08. React DOM Event Handlers : 
+    09. useState hook (1) : 
+    10. props with useState hook : 
+    11. State Lifting : 
+    12. Conditional rendering : 
+    13. Event Handling :
+    14. useEffect hook (2) :
+    15. useContext hook (3) : 
+    16. useRef hook (4) :
+    17. useMemo Hook (5) : 
+    18. useCallback hook (6) :
+    19. Custom Hook : 
+    20. Hook form (external way to create form) : 
+    21. React Routing : 
+    22. Context API : 
+    23. React Redux Toolkit : 
+    24. Controlled vs Uncontrolled Components :
+    25. React Testing (Intro) : 
+    26. Error Boundaries & Error Handling : 
+    27. Deployment : 
+
+
+    01. Installation of React JS (Tailwind too wherever required) : 
+        - Setting up a React project using Vite or Create React App
+        - Installing dependencies
+        - Integrating Tailwind CSS for styling (wherever required)
+    02. Understanding React folder contents : 
+        - Breakdown of files and folders (node_modules, public, src, etc.)
+        - Understanding configuration files (package.json, vite.config.js / webpack.config.js)
+    03. Understanding main component (main.jsx), App component(App.jsx) and custom components : 
+        - Main Component (main.jsx) - entry point
+        - App Component (App.jsx) - root component
+        - Custom Components - creating and importing reusable components
+    04. JSX (JavaScript XML) : 
+        - Syntax and rules of JSX
+        - Embedding expressions
+        - Differences from HTML
+    05. props, props from other component : 
+        - Passing data between components using props
+        - Accessing and using props in child components
+    06. VirtualDOM, Fiber and Reconciliation : 
+        - How Virtual DOM works
+        - Introduction to React Fiber architecture
+        - How React updates the UI efficiently
+    07. hooks : 
+        - What are hooks and why they are used
+        - Rules of hooks
+    08. React DOM Event Handlers : 
+        - React uses synthetic events – a wrapper around native events for consistency across browsers.
+        - Event names use camelCase (e.g. onClick, onChange).
+        - Handlers are passed as functions, not strings.
+    09. useState hook (1) : 
+        - Managing state in functional components
+        - Updating and accessing state
+    10. props with useState hook : 
+        - Using props in components that also have local state
+        - Synchronizing props and state
+    11. State Lifting : 
+        - Sharing state between components
+        - Lifting state up to the nearest common ancestor
+    12. Conditional rendering : 
+        - Using if, ternary operator, &&, and switch for rendering logic
+        - Best practices
+    13. Event Handling :
+        - Handling user events like onClick, onChange, etc.
+        - Binding functions and passing event handlers
+    14. useEffect hook (2) :
+        - Side effects in React (e.g. fetching data, subscriptions)
+        - Dependencies array and cleanup functions
+    15. useContext hook (3) : 
+        - Creating and using context
+        - Avoiding prop drilling by using context
+    16. useRef hook (4) :
+        - Referencing DOM elements
+        - Storing mutable values that don’t trigger re-render
+    17. useMemo Hook (5) : 
+        - Memoizing expensive calculations
+        - Performance optimization
+    18. useCallback hook (6) :
+        - Memoizing functions to avoid unnecessary renders
+        - Use with child components and effects
+    19. Custom Hook : 
+        - Creating own hook according to our needs
+    20. Hook form (external way to create form) : 
+        - Using React Hook Form library
+        - Validation and controlled inputs
+    21. React Routing : 
+        - Setting up React Router
+        - Route navigation, dynamic routes, and nested routes
+    22. Context API : 
+        - Global state management using Context
+        - Combining with hooks for efficient state access
+    23. React Redux Toolkit : 
+        - Setting up Redux Toolkit
+        - Creating slices, store, and dispatching actions
+        - Using Redux with React hooks
+    24. Controlled vs Uncontrolled Components :
+        - Why? Important for understanding how forms work with useRef vs useState.
+        - Controlled components using useState
+        - Uncontrolled components using useRef
+    25. React Testing (Intro) : 
+        - Why? Employers often expect some understanding of testing.
+        - Intro to React Testing Library
+        - Writing a basic test case for a component
+    26. Error Boundaries & Error Handling : 
+        - Why? Helps prepare for robust apps.
+        - Using componentDidCatch (via class components)
+        - Optional: third-party solutions like react-error-boundary
+    27. Deployment : 
+        - Why? Rounds off the dev cycle and prepares learners for portfolio demos.
+        - Deploying using Vercel, Netlify, or GitHub Pages
+        - Creating a production build with vite build or npm run build
+
+
+
+
+
+
+
+
+
+
+React DOM Event Handlers
+Event	Description	HTML Equivalent
+onClick	Triggered when an element is clicked	onclick
+onChange	Triggered when input value changes	onchange
+onSubmit	Triggered when a form is submitted	onsubmit
+onInput	Similar to onChange, for <input>/<textarea>	oninput
+onKeyDown	Triggered when a key is pressed	onkeydown
+onKeyUp	Triggered when a key is released	onkeyup
+onKeyPress	(Deprecated) use onKeyDown instead	onkeypress
+onFocus	Triggered when an element gains focus	onfocus
+onBlur	Triggered when an element loses focus	onblur
+onMouseEnter	Triggered when mouse enters an element	onmouseenter
+onMouseLeave	Triggered when mouse leaves an element	onmouseleave
+onMouseOver	Triggered when mouse is over an element	onmouseover
+onMouseOut	Triggered when mouse leaves (similar to leave)	onmouseout
+onDoubleClick	Triggered when an element is double-clicked	ondblclick
+onContextMenu	Triggered on right-click	oncontextmenu
+onDragStart	Triggered when a drag starts	ondragstart
+onDrop	Triggered when something is dropped	ondrop
+onDragOver	Triggered when dragging over a target	ondragover
+onScroll	Triggered on scroll	onscroll
+onLoad	Triggered when media/data loads	onload
+onError	Triggered when there's an error loading media	onerror
+onTouchStart	For mobile/touch devices	ontouchstart
+onTouchEnd	For mobile/touch devices	ontouchend
+
+
+
+
+📌 Notes:
+React uses camelCase for event names: onClick instead of onclick.
+
+
+
+
+You pass functions (or references), not strings:
+✅ onClick={handleClick}
+❌ onClick="handleClick()"
+
+
+
+
+🧠 Tip: Grouped by Use Case
+
+🖱️ Mouse Events
+onClick, onDoubleClick, onContextMenu, onMouseEnter, onMouseLeave, onMouseOver, onMouseOut
+
+🎹 Keyboard Events
+onKeyDown, onKeyUp
+
+📄 Form Events
+onChange, onInput, onSubmit, onFocus, onBlur
+
+🧲 Drag & Drop
+onDragStart, onDrop, onDragOver
+
+📜 UI Events
+onScroll, onLoad, onError
+
+📱 Touch Events
+onTouchStart, onTouchEnd
