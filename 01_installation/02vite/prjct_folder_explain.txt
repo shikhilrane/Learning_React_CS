@@ -1,0 +1,53 @@
+Understanding React Project :
+    Vite + React folder usually comes with :
+        01. node_modules - It contains installed dependencies that we use in project (dependencies which is available in package.json)
+        02. public - It contains media files and static assets (favicons, fonts, ) that are used in the <head> of the HTML document or accessed directly via URL
+        03. src (source folder) - This is the place where we actually work i.e. we will be in src folder 100% of out time to work
+            it contains (by default) :
+            assets              -   DELETE It contains logo (it contain media files we will use in project)
+            App.css             -   DELETE (not talking about css not) (A CSS file that styles the App.jsx component.)
+            App.jsx             -   KEEP (The main React component of your app. Contains basic styles for your main app.)
+            index.css           -   DELETE (A global CSS file applied to entire app & contains base styles like font settings or resets.)
+            main.jsx            -   KEEP (The entry point of your React app. It renders the App component into the index.html)
+            (index.css linked with main.jsx and App.css linked with App.jsx).
+        04. .gitignore - it contains file/folder that we dont want to push to git
+        05. eslint.config.js - Checks your project's code for errors, bugs, or stylistic issues using ESLint
+        06. index.html - This is the main HTML file. Your React app gets injected here. 
+        07. package-lock.json - It is package.json but here dependencies get locked (dependencies ka stable version yaha hota he iske baare me detail me baad me dekhenge). It locks the exact versions of installed packages. Ensures the same setup on all systems.
+        08. package.json - It lists the project's dependencies, scripts, and info. It’s like your project’s settings file.
+        09. README.md - A file to describe your project
+        10. vite.config.js - Use it to set aliases, plugins, custom server settings, etc.
+
+
+    package.json explaination : 
+        1. First open package.json and read name, version,type and version
+        2. look for scripts (these scripts are responsible to run project and ready it for production) In scripts there are,
+            1. dev - It is use to run scripts at development environment
+            2. build - when our application goes to production it behaves differently because we know browser only code in forms of HTML, CSS and Js but when when we sent react code to browser, it doesn't understand code in react, so to handle that situation build is there
+            3. lint - Checks your project's code for errors, bugs, or stylistic issues using ESLint
+            4. preview - Serves the built production files locally so you can test how your app will behave after deployment.
+        3. dependencies : react and react-dom  (because of less dependencies it is light weight to use)
+        4. devDpendencies : It is useful in development and doesn't go in production
+
+
+    Explaination for README.md file
+    Every project comes with README.md file. It is recommended that to update README with every project
+        It contains documentation for project 
+        1. Project Title - Clear name for project
+        2. Description - A short explaination about what this project does
+        3. Screenshot (optional) - Images/Gifs to visually showcase the app
+        4. Installation instruction - How to install and run project locally
+                                        git clone https://github.com/yourname/project-name.git
+                                        cd project-name
+                                        npm install
+                                        npm start
+        5. Technologies used - List of key tools and libraries
+        6. Features - Brief overview of what the app can documentation
+        7. Usage - Examples or instruction on how to use the app
+        8. Contributing - Guidelines if others wants to contribute
+        9. License - The license for the project (e.g. MIT, Apache 2.0)
+
+    
+    Flow of project : 
+        index.html (it contains the root id) ==> 
+        main.jsx (it is react file that target root from index.html and renders it) ==> 
