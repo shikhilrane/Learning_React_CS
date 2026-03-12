@@ -44,7 +44,7 @@ root.render(
         import React from 'react' => core foundational library
         import ReactDOM from 'react-dom/client' => It is implementation of react on web just like react-native is implementation on mobile
     4. const root - is targeted element from /public/index.html
-    5. ReactDOM -  is a own DOM created by React which is also called as virtual DOM and then it compare it with main DOM and check differences and change only where it ned to changes according to web DOM (we will see about this later)
+    5. ReactDOM -  is a own DOM created by React which is called as virtual DOM and then it compare it with main DOM and check differences and change only where it ned to changes according to web DOM (we will see about this later)
     6. .createRoot - createRoot lets you create a root to display React components inside a browser DOM node
     7. root.render -              <React.StrictMode>
                                     <App />
@@ -56,6 +56,6 @@ root.render(
     8. <React.StrictMode>...</React.StrictMode> - It is safe for development so that we can do optimisation, We can even remove this
     9. <App /> - It a function that returns a HTML (It is also called a component)
    10. flow - 
-          made a function in App.js that returns HTML => imported App.js to index.html => renderd index.js to root in index.html
+          made a function in App.js that returns HTML => imported App.js to index.js => renderd index.js to root in index.html
 
 */
