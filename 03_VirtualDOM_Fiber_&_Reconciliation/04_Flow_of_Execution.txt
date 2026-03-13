@@ -1,0 +1,18 @@
+1. JSX convert hota he tree like structure me using babel like type (tag name), props (attributes/properties), and children(content of element) 
+
+2. virtual dom banegi jisko fiber manage karega jisme saare jsx se convert hue objects load karta he virtual dom me
+
+3. fir agar kuchh us virtual dom me update ata he toh reconciliation, diffing algorithm ki help se compare karta he new virtual dom and previous virtual dom ko and decide karta hai kya change karna hai
+
+4. Fir wo changes reflect hote he new virtual DOM me 
+
+5. Fir wo un valid change ko index.html ke #root container ke andar Real DOM update hota hai 
+
+NOTE : .createRoot() method ek hi baar chal jata he index.html ke root element me mount karne keliye uske baad changes hote rehte he
+
+
+
+
+Virtual dom = react khud ki bana leta he
+Fiber = Fiber React ka internal architecture hai jo rendering, scheduling aur updates manage karta hai (element rendering ki priority decide hoti he webpage pe)
+Reconciliation = diffing algorithm ka use karke updated virtual dom and previous virtual dom ko compare krta he and decide karta hai kya change karna hai

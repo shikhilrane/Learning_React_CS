@@ -85,32 +85,35 @@ createRoot(document.getElementById('root')).render(
     Babel transforms JSX (including fragments) into React function calls.
     React renders those elements into the webpage’s DOM.
 
-    Babel converts JSX into a React element (JavaScript object) like this:
+    Babel converts JSX into a React.createElement() like this:
 
-    {
-      type: "a",
-      props: {
-        href: "https://google.com",
-        children: "Click me"
-      }
-    }
+      1. In JSX :
+        <a href="https://google.com">Click me</a>
 
-    This object has 3 main parts:
+      2. This object has 3 main parts:
 
-    1. type : Element or component name
-      JSX       → <a>Click me</a>
-      JS Object → type: "a"
+        2.1. type : Element or component name
+          JSX       → <a>Click me</a>
+          JS Object → type: "a"
 
-    2. props : Attributes / properties of the element
-      JSX       → <a href="https://google.com">
-      JS Object → props: {
-                      href: "https://google.com"
-                  }
+        2.2. props : Attributes / properties of the element
+          JSX       → <a href="https://google.com">
+          JS Object → props: {
+                          href: "https://google.com"
+                      }
 
-    3. children : Content inside the element (inside props)
-      JSX       → <a>Click me</a>
-      JS Object → children: "Click me"
-
+        2.3. children : Content inside the element (inside props)
+          JSX       → <a>Click me</a>
+          JS Object → children: "Click me"
+      
+      3. In React.createElement() : 
+        {
+          type: "a",
+          props: {
+            href: "https://google.com",
+            children: "Click me"
+          }
+        }
 
 
     1. Normal calling with <StrictMode>...</StrictMode>

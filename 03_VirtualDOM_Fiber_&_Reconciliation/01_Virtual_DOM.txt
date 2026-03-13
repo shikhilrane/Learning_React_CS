@@ -1,0 +1,31 @@
+************************************************************** Virtual DOM **************************************************************
+
+Documentation to know more about Virtual DOM, Fiber and Reconciliation : https://github.com/acdlite/react-fiber-architecture
+
+1. Virtual DOM is an important part to understand React
+2. Although it is not usable in react manually, but we should know concept of Virtual DOM
+3. It can be asked in interviews. Virtual DOM is a common topic in React interviews
+4. createRoot() (in main.jsx fike) is responsile for Virtual DOM and we will learn this mthod only to know VD
+5. createRoot() creates its own DOM like structure and compare it with main DOM / browser DOM and then only changes the things that updated in UI.
+6. But browser DOM (without react) removes the old DOM and repaint it with new DOM and that is what we call page reloading
+7. But in Virtual DOM, whole DOM can be tracked and only updates the changed parts in the real DOM / browser DOM. This avoids full reloads and improves performance.
+8. But if some elements (assume it as button) are network dependent and and agr us button ko update kar rhe the utne hi time me multiple request aa gye to kitni baar update karoge? and is case me agr hum thoda ruk jaate to wo intermediate wali updates update hi nahi karni padti sidha last wali network request update kar dete DOM pe. Aur yahi chij react ki team ko aayi thi ki har UI ko instantly update karna jaruri nahi he jese ki ruke hue time me jitne network requests aati he unko un sbko drop karke sirf last wali network request ke hisab se update kardu to ek acchi algorithm develop ho skti he
+
+                    visualising problem
+
+                    button  =   Network request 1 => Network request 2 => Network request 3 => Network request 4
+                    
+                        Network request 1 = Agr ye request update karte karte Network request 2,3,4 bhi ek ke pichhe ek aa gye to?
+                        Network request 2 & Network request 3 = thoda wait karke in dono ko skip karde
+                        Network request 4 = Sidha Network request 4 (jo last wali) ko browser DOM me update karde aisi koi algorithm ki jarurat thi
+
+                        Request 1 → 🟡 Start updating  
+                        Request 2 → 🔴 Hold  
+                        Request 3 → 🔴 Hold  
+                        Request 4 → 🟢 Final update to DOM
+
+                        React skips intermediate updates (Request 2 & 3)
+                        Waits just a bit and directly updates the DOM using the latest (Request 4)
+                        This makes UI smoother, faster, and more meaningful
+
+9. To solve the problem of unnecessary and inefficient UI updates, React introduced a new architecture called Fiber.
