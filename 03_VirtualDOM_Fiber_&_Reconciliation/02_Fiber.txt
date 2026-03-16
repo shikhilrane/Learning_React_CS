@@ -1,6 +1,0 @@
-************************************************************** React Fiber **************************************************************
-
-1. It is a algorithm that control the reupdation problem in DOM
-2. React uses Fiber algorithm to update Virtual DOM
-3. Key Features of Fiber : The ability to pause, abort, or reuse work as new updates come in and ability to assign priority to different types of updates (mtlb kisko priority dena he kisko nahi dena wo sab), 
-4. Hydration : jab webpage load hota he to pehle html aati he pr uspe jo button hote he ya link hote he wo clickable nahi hote pr jb usme JS aati he and wo JS injecting into HTML wali chijo ko hum Hydration kehte he. To wo Hydration process is algorithm ke through acchi hoti he
