@@ -8,6 +8,7 @@ import Uber from '../../assets/Uber_logo_2018.svg.png'
 import Airbnb from "../../assets/airbnb.png";
 import LinkedIn from "../../assets/linkedin.png";
 import YellowBorder from '../../components/YellowBorder';
+import TechStackCard from '../../components/TechStackCard';
 
 function Main() {
 
@@ -57,6 +58,18 @@ function Main() {
     },
   ];
 
+  const techStackList = [
+    { name: "React", image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+    { name: "Tailwind CSS", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+    { name: "ShadCN Ui", image: "https://mediaresource.sfo2.digitaloceanspaces.com/wp-content/uploads/2024/04/20161105/shadcn-ui-logo-EF735EC0E5-seeklogo.com.png" },
+    { name: "Spring Boot", image: "https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg" },
+    { name: "Kubernetes", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/800px-Kubernetes_logo_without_workmark.svg.png" },
+    { name: "PostgreSQL", image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" },
+    { name: "MySQL", image: "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" },
+    { name: "Kafka", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Apache_Kafka_logo.svg/800px-Apache_Kafka_logo.svg.png" },
+    { name: "Redis", image: "https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg" }
+  ];
+
   return (
     <main>
       <YellowBorder>
@@ -74,8 +87,8 @@ function Main() {
       </a>
 
       <ul>  {/* Iterationg over fruits */}
-        {fruits.map((frt) => {
-          return <li>{frt}</li>;
+        {fruits.map((frt,index) => {
+          return <li key={index} >{frt}</li>;           {/* React me jab bhi map() se list render karo, har element ko unique key prop dena zaroori hai. */}
         })}
       </ul>
 
@@ -86,10 +99,20 @@ function Main() {
           {/* <ProjectCard {...uberInProject} />
           <ProjectCard {...airBnbInProject} />
           <ProjectCard {...linkedInProject} /> */}
+          {projectList.map((project) => (         // Iterating over value projectList to add values for props
+            <ProjectCard key={project.title} {...project} /> // Made project of title as key so react can segreagate them on basic of key
+          ))}
+        </div>
+      </section>
 
-          {projectList.map((project) => {         // Iterating over value projectList to add values for props
-            return <ProjectCard {...project} />
-          })}
+      <section className="techstack-section">
+        <h2>Technologies that I know</h2>
+        <p>I have listed some of my top skills here, I know more ofcourse</p>
+
+        <div className="techstack-container">
+          {techStackList.map((techlist,index) => (
+            <TechStackCard key={index} {...techlist} />
+          ))}
         </div>
       </section>
     </main>
