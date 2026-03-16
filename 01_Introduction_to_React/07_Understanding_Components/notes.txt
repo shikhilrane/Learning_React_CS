@@ -1,0 +1,14 @@
+Folder structure :
+    app : in which web-pages like landing pages, contact us pages, about us pages, etc. to be kept
+    assets : folder in which we should keep all the images and svg files
+    components : in this we should keep out supporting components
+
+Components :
+    1. A component is a reusable piece of UI that returns JSX or we can say creates part of the UI.
+    2. Example :
+        component creation :
+            function Hello() {
+                return <h1>Hello World</h1>;
+            }
+        component use :
+            <Hello />

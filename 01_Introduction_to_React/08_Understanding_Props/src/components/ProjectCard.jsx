@@ -3,7 +3,7 @@ import uber from '../assets/Uber_logo_2018.svg.png'
 import './ProjectCard.css'
 import githubIcon from '../assets/25231.png'
 
-function ProjectCard({title,description,imgUrl,gitHubLink}) {
+function ProjectCard({title,description,imgUrl,gitHubLink}) {   {/* destructiong of element for object for props */}
   return (
     <div className='project-card'>
         <div className="img-wrapper">

@@ -34,7 +34,7 @@ function Main() {
 
   return (
     <main>
-      <YellowBorder>
+      <YellowBorder>    {/* Wrapper component hai jo apne andar ke content ko yellow border style ke saath wrap karta hai. */}
         <h2 className="name-heading">My name is Shikhil</h2>
       </YellowBorder>
       <ol>
@@ -52,7 +52,7 @@ function Main() {
         <h2>These are my projects</h2>
         <p>I build high-quality Projects of all shapes and sizes</p>
         <div className="project-container">
-          <ProjectCard {...uberInProject} />
+          <ProjectCard {...uberInProject} /> {/* we can spread all the values in given component using spread operator */}
           <ProjectCard {...airBnbInProject} />
           <ProjectCard {...linkedInProject} />
         </div>

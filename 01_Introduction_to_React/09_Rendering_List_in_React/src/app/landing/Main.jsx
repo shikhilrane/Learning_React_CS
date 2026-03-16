@@ -32,9 +32,9 @@ function Main() {
   //   gitHubLink: "https://github.com/shikhilrane"
   // };
 
-  const fruits = ["Apple", "Kiwi", "Mango"];
+  const fruits = ["Apple", "Kiwi", "Mango"];  // To Iterate over an array 
 
-  const projectList = [
+  const projectList = [           // To put values in jsx component for props
     {
       title: "Uber Clone App",
       description: "This project showcases how to build a ride bookig Application in Spring Boot",
@@ -73,7 +73,7 @@ function Main() {
         </span>
       </a>
 
-      <ul>
+      <ul>  {/* Iterationg over fruits */}
         {fruits.map((frt) => {
           return <li>{frt}</li>;
         })}
@@ -87,7 +87,7 @@ function Main() {
           <ProjectCard {...airBnbInProject} />
           <ProjectCard {...linkedInProject} /> */}
 
-          {projectList.map((project) => {
+          {projectList.map((project) => {         // Iterating over value projectList to add values for props
             return <ProjectCard {...project} />
           })}
         </div>

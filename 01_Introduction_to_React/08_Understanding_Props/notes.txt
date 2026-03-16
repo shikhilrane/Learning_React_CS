@@ -1,0 +1,2 @@
+1. Props :Props are inputs or data passed from a parent component to a child component.
+2. Wrapper Component : A wrapper component is a component that wraps other components or elements to add styling, layout, or extra functionality.
