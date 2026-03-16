@@ -1,0 +1,26 @@
+.name-heading{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+main > ol{
+    line-height: 2rem;
+}
+
+.hire-me-button{
+    color: black;
+    background-color: greenyellow;
+    padding: 6px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 2rem;   
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+footer > span {
+    color: gray;
+}
