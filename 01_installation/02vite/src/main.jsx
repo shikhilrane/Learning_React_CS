@@ -1,12 +1,23 @@
-import { StrictMode } from 'react'
+import { Fragment, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
+// // This is how React targets root element in their default main.jsx file using createRoot() method that comes from react-dom (this is for understanding only)
+// const targetElement = document.getElementById('root');
+// const rootDom = createRoot(targetElement);
+// rootDom.render(
+//   <>
+//     <h2>Hello</h2>
+//     <App />
+//   </>
+// );
+
+// This is default method of react-dom to target an root element
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)
+);
 
 
 
