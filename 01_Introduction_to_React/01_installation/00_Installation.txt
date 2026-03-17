@@ -64,7 +64,13 @@ Vite → React app ko fast start & build karne ke liye tool
 
 B. Installation of tailwind in react (using Vite) :
     1. first make react project and be in the that folder
-    2. put 'npm install tailwindcss @tailwindcss/vite' in terminal
-    3. Then import 'import tailwindcss from '@tailwindcss/vite'' in vite.config.js which is in root folder of project
-    4. Then add put 'tailwindcss()' with plugins array. (plugins: [react(),tailwindcss(),] like this)
-    5. Put '@import "tailwindcss";' in the head of App.css file which is situated in src folder
+    2. run this command in terminal 'npm uninstall @vitejs/plugin-react' 
+        because @vitejs/plugin-react@6 requires Vite 8, while the Tailwind Vite plugin currently supports Vite 5 / 6 / 7. (Kyuki @vitejs/plugin-react@6 Vite 8 require karta hai, aur Tailwind plugin Vite 7 tak support karta hai.)
+    3. then run this command in terminal'npm install -D @vitejs/plugin-react@5' 
+        because @vitejs/plugin-react@6 requires Vite 8, while the Tailwind Vite plugin currently supports Vite 5 / 6 / 7. (Kyuki @vitejs/plugin-react@6 Vite 8 require karta hai, aur Tailwind plugin Vite 7 tak support karta hai.)
+    4. put 'npm install tailwindcss @tailwindcss/vite' in terminal to install tailwind in project
+    5. Then import 'import tailwindcss from '@tailwindcss/vite'' in vite.config.js which is in root folder of project
+    6. Then add put 'tailwindcss()' with plugins array. (plugins: [react(),tailwindcss(),] like this)
+    7. Put '@import "tailwindcss";' in index.css
+
+    NOTE : On 17/03/2026, step 2 and 3, Ye temporary compatibility workaround hai. Tumhe ye steps tab tak follow karne padenge jab tak Tailwind CSS ka Vite plugin Vite 8 support officially release nahi karta.
