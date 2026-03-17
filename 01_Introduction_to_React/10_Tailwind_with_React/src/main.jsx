@@ -8,3 +8,5 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+// https://nerdcave.com/tailwind-cheat-sheet (cheatsheet where we can see all the tailwind css classes)
