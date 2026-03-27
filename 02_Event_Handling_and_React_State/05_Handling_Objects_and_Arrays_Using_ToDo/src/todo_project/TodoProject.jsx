@@ -62,3 +62,54 @@ const TodoProject = () => {
 }
 
 export default TodoProject
+
+/*
+
+                            1. Project Flow :
+                                    User types todo
+                                            ↓
+                                    Form submit
+                                            ↓
+                                    handleFormSubmit() run
+                                            ↓
+                                    Todo object create {text, id, completed}
+                                            ↓
+                                    setTodos([...todos, newTodo])
+                                            ↓
+                                    React re-render
+                                            ↓
+                                    todos.map()
+                                            ↓
+                                    TodoItem components render
+
+                            2. Checkbox flow:
+                                    Checkbox click
+                                            ↓
+                                    onTodoToggle(id, checked)
+                                            ↓
+                                    todos.map() me matching id update
+                                            ↓
+                                    setTodos(updatedTodos)
+                                            ↓
+                                    React re-render
+                                            ↓
+                                    Text line-through if completed
+
+                            3. Delete flow:
+                                    Delete button click
+                                            ↓
+                                    handleDeleteTodo(id)
+                                            ↓
+                                    todos.filter() remove item
+                                            ↓
+                                    setTodos(newTodos)
+                                            ↓
+                                    React re-render
+                                            ↓
+                                    Todo removed from UI
+
+                            4. Empty state flow:
+                                    todos.length === 0
+                                            ↓
+                                    Show "Nothing here, add a Todo"
+*/
